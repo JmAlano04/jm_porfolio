@@ -11,6 +11,84 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
+
+
+  <style>
+    .videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.link-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+.video-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.video-thumb {
+  position: relative;
+}
+
+.video-thumb img {
+  width: 100%;
+  display: block;
+}
+
+.play-icon {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  color: white;
+  background: rgba(0,0,0,0.35);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.video-card:hover .play-icon {
+  opacity: 1;
+}
+
+.video-info {
+  padding: 18px;
+}
+
+.video-info h3 {
+  margin-bottom: 8px;
+}
+
+.video-info p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.video-tag {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.75rem;
+  background: #111;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+  </style>
 </head>
 <body>
   <!-- Header -->
@@ -181,6 +259,79 @@
     </div>
   </section>
 
+
+    <!-- Video Portfolio Section -->
+<section id="videos" class="bg-light">
+  <div class="container">
+    <h2 class="text-center">Video Editing Portfolio</h2>
+    <p class="section-subtitle text-center">
+      Selected video works. Click a thumbnail to view the full video.
+    </p>
+
+    <div class="videos-grid">
+
+      <!-- Video Item -->
+      <a href="https://drive.google.com/file/d/1cnDK0D7HbvrYWFDojlk-cJ-mYBQ4-dc3/view"
+         target="_blank"
+         class="video-card link-card">
+
+        <div class="video-thumb">
+          <img src="images/5072b780-bded-4429-ac8b-fe4cc1a2322d.jpg" alt="Informational Video">
+          <span class="play-icon">
+            <i class="fas fa-play"></i>
+          </span>
+        </div>
+
+        <div class="video-info">
+          <h3>Informational Video</h3>
+          <p>Rizal's message to the young women of malolos</p>
+          <span class="video-tag">Google Drive</span>
+        </div>
+      </a>
+
+      <!-- Google Drive Video -->
+      <a href="https://drive.google.com/file/d/1a9AIibcdLb_l_6B31m_uzAI4uQZqe5zm/view?usp=drive_link"
+         target="_blank"
+         class="video-card link-card">
+
+        <div class="video-thumb">
+          <img src="images/44f4e13d-ba1f-4f50-ac8c-57c4f8e8d7ad.jpg" alt="Social Media Edit">
+          <span class="play-icon">
+            <i class="fas fa-play"></i>
+          </span>
+        </div>
+
+        <div class="video-info">
+          <h3>Introduction Video</h3>
+          <p>An audio-visual presentation created for a pageant candidate, highlighting personal background, advocacy, and key information.</p>
+          <span class="video-tag">Google Drive</span>
+        </div>
+      </a>
+
+      <!-- Another Video -->
+      <a href="https://vimeo.com/VIDEO_ID"
+         target="_blank"
+         class="video-card link-card">
+
+        <div class="video-thumb">
+          <img src="images/video3.jpg" alt="Cinematic Edit">
+          <span class="play-icon">
+            <i class="fas fa-play"></i>
+          </span>
+        </div>
+
+        <div class="video-info">
+          <h3>Cinematic Montage</h3>
+          <p>Color grading, cinematic cuts, and sound design.</p>
+          <span class="video-tag">Vimeo</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
   <!-- Clients Section -->
   <section id="clients" class="bg-light">
     <div class="container">
@@ -219,6 +370,9 @@
       </div>
     </div>
   </section>
+
+
+
 
   <!-- Services Section -->
   <section id="services" class="bg-light">
